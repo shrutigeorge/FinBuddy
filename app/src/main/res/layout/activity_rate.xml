@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity"
+    android:fitsSystemWindows="false"
+    tools:openDrawer="start">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@color/paleyellow"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/lightpink"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white"
+            android:layout_alignParentTop="true"
+            app:title=""/>
+
+        <!-- Header Text -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Feedback"
+            android:textColor="@color/text_primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/eb_garamond_extrabold"/>
+
+        <!-- Name Input -->
+        <EditText
+            android:id="@+id/etname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your name"
+            android:backgroundTint="@color/rose"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/eb_garamond"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select Feedback Type"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/eb_garamond"/>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/rose"
+            android:spinnerMode="dropdown"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Rating Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rate Your Experience"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/eb_garamond"/>
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:rating="0.0"
+            android:progressTint="@color/rose"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/ratingValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0.0"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- SeekBar for Additional Feedback -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="How likely are you to recommend us?"
+            android:textColor="@color/text_primary"
+            android:textSize="17sp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/eb_garamond"/>
+        <SeekBar
+            android:id="@+id/seekBarprice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:progress="0"
+            android:max="100"
+            android:progressTint="@color/rose"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+        <TextView
+            android:id="@+id/seekBarValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Feedback"
+            android:backgroundTint="@color/rose"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Result Display -->
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Results Displayed Here"
+            android:textColor="@color/hotpink"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:background="@color/butter"
+            android:fontFamily="@font/eb_garamond"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/nav_view"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_gravity="start"
+        android:background="@color/butter"
+        app:itemTextColor="@color/black"/>
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="paleyellow">#FAEAB7</color>
+    <color name="lightpink">#FFB5C0</color>
+    <color name="pink">#F699CD</color>
+    <color name="rose">#FC94AF</color>
+    <color name="fuscia">#FC46AA</color>
+    <color name="punch">#F25278</color>
+    <color name="watermelon">#FE7F9C</color>
+    <color name="rouge">#F26B8A</color>
+    <color name="coral">#FE7D6A</color>
+    <color name="strawberry">#FC4C4E</color>
+    <color name="hotpink">#FF1694</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="sand">#DAC17C</color>
+    <color name="biscotti">#E3C565</color>
+    <color name="butter">#FDEFB2</color>
+
+
+</resources>
